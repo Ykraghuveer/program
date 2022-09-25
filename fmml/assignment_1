@@ -1,0 +1,156 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "collapsed_sections": [],
+      "authorship_tag": "ABX9TyNvDfSd9lpPLu2Oxc4RpmzO",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Ykraghuveer/program/blob/main/fmml/assignment_1\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "bnHhAI3RtjWU",
+        "outputId": "2e1d8b20-8a0b-4518-e241-b33743e3fee2"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "friendsih\n"
+          ]
+        }
+      ],
+      "source": [
+        "#code for question 1\n",
+        "def str_combo(A,B):\n",
+        "  A=A[::-1]\n",
+        "  return B+A\n",
+        "s=str_combo('hi','friends')\n",
+        "print(s)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#code for question 2\n",
+        "def more_work(emp):\n",
+        "  h=0\n",
+        "  for i in range(len(emp)):\n",
+        "    if emp[i][1]>h and emp[i][2]=='F':\n",
+        "      h=emp[i][1]\n",
+        "  high=h*20\n",
+        "  employ=''\n",
+        "  for i in range(len(emp)):\n",
+        "    if emp[i][1]==high and emp[i][2]=='F':\n",
+        "      employ+=emp[i][0]\n",
+        "      break\n",
+        "  print(f\"the female worker that worked the most hours is {employ} and she should be paid {high}\")\n",
+        "emp=[('Abby',100 , 'F'),('Billy',400, 'M'),('Cassie',800,'F'), ('Maggi',600,'F'),('Alex',500,'M'),('Raj',225,'M'),('Penny',920,'F'),('Ben',300,'M')]\n",
+        "more_work(emp)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "YkCu3wKTxiZn",
+        "outputId": "24c116da-e19a-4282-ba74-8799959f04d6"
+      },
+      "execution_count": 23,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "the female worker that worked the most hours is  and she should be paid 18400\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#\n",
+        "import numpy as np\n",
+        "m=np.zeros((5,5))\n",
+        "m=m+np.arange(1,6)\n",
+        "n=m.T\n",
+        "n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "BMHtpszs5auZ",
+        "outputId": "f69f1e45-2aa2-4fa8-902c-35c2605f1b5e"
+      },
+      "execution_count": 17,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([[1., 1., 1., 1., 1.],\n",
+              "       [2., 2., 2., 2., 2.],\n",
+              "       [3., 3., 3., 3., 3.],\n",
+              "       [4., 4., 4., 4., 4.],\n",
+              "       [5., 5., 5., 5., 5.]])"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 17
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "i=np.arange(1,26).reshape(5,5)\n",
+        "k=np.dot(n,i)\n",
+        "print(k.size)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "tLMw-u9Q7Rpd",
+        "outputId": "f9440d3f-0916-4502-ecce-445045bba26f"
+      },
+      "execution_count": 26,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "25\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
